@@ -1,0 +1,76 @@
+body {
+            /* Set a background color for the overall page */
+            background-color: #f7f3ed; /* A light off-white, slightly warm color from the image */
+            margin: 0;
+            font-family: serif; /* Using a standard serif font for approximation */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Prevent scrolling if things shift slightly */
+        }
+
+        .container {
+            /* Create a container that centers its contents like in the image */
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        h1 {
+            /* Style for the 'Find Your Joke Here' text */
+            font-size: 60px; /* Large font size from the image */
+            font-weight: 400; /* Regular weight, not bold */
+            color: #1a1a1a; /* Dark charcoal color from the text */
+            margin: 0;
+            line-height: 1.2; /* To match the line spacing in the image */
+            text-align: left; /* Keep it left-aligned within the left section */
+            position: absolute;
+            left: 5%; /* Position the text to the left of the container */
+            top: 50%; /* Start positioning from the vertical center */
+            transform: translateY(-50%); /* Shift it up by half its height to be centered */
+            width: 50%; /* Use up to half the width for the text, ensuring two lines */
+            word-wrap: break-word; /* Allow text to wrap if the font is smaller */
+        }
+
+        .button-wrapper {
+            /* A wrapper to position the button on the right, centering it vertically */
+            position: absolute;
+            right: 5%; /* Position the button to the right of the container */
+            top: 50%; /* Center the wrapper vertically */
+            transform: translateY(-50%); /* Centering trick */
+            width: 50%; /* Occupy the remaining 50% width on the right */
+            display: flex;
+            justify-content: center; /* Center the button within its 50% section */
+        }
+
+        button {
+            /* Style for the 'Button' element */
+            background-color: #333333; /* Dark gray color from the button in the image */
+            color: #ffffff; /* White color for the button text */
+            border: none;
+            padding: 15px 40px; /* Ample padding for the size from the image */
+            font-size: 16px; /* Text size, using a clean sans-serif for contrast */
+            border-radius: 8px; /* Smooth, rounded corners like in the image */
+            cursor: pointer;
+            text-align: center;
+            text-transform: capitalize; /* Capitalize each word 'Button' as in the image */
+            letter-spacing: 0.5px; /* Slight letter spacing from the image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        /* Adding hover and active states for a better interactive feel */
+        button:hover {
+            background-color: #222222; /* Slightly darker gray on hover */
+        }
+
+        button:active {
+            background-color: #111111; /* Even darker on click */
+        }
