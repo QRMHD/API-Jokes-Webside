@@ -38,14 +38,14 @@ body {
         }
 
         .button-wrapper {
-            /* A wrapper to position the button on the right, centering it vertically */
+            /* Position the button wrapper at the bottom center of the page */
             position: absolute;
-            right: 25%; /* Position the button to the right of the container */
-            top: 50%; /* Center the wrapper vertically */
-            transform: translateY(-50%); /* Centering trick */
-            width: 50%; /* Occupy the remaining 50% width on the right */
+            left: 50%;
+            bottom: 40px;
+            transform: translateX(-50%);
+            width: auto;
             display: flex;
-            justify-content: center; /* Center the button within its 50% section */
+            justify-content: center;
         }
 
         button {
