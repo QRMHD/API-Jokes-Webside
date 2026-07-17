@@ -3,11 +3,11 @@ body {
             background-color: #f7f3ed; /* A light off-white, slightly warm color from the image */
             margin: 0;
             font-family: serif; /* Using a standard serif font for approximation */
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden; /* Prevent scrolling if things shift slightly */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         .container {
@@ -73,4 +73,41 @@ body {
 
         button:active {
             background-color: #111111; /* Even darker on click */
+        }
+
+        @media (max-width: 600px) {
+            body {
+                min-height: 100vh;
+                padding-bottom: 100px;
+            }
+
+            .container {
+                align-items: flex-start;
+                padding: 20px 16px 100px;
+                height: auto;
+            }
+
+            h1 {
+                font-size: 32px;
+                position: static;
+                transform: none;
+                width: 100%;
+                text-align: center;
+                margin: 0 auto;
+                line-height: 1.2;
+            }
+
+            .button-wrapper {
+                position: fixed;
+                left: 50%;
+                bottom: 20px;
+                transform: translateX(-50%);
+                width: auto;
+                padding: 0 10px;
+            }
+
+            button {
+                padding: 12px 28px;
+                font-size: 14px;
+            }
         }
