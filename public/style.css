@@ -45,7 +45,8 @@ body {
             transform: translateY(-50%); /* Centering trick */
             width: 50%; /* Occupy the remaining 50% width on the right */
             display: flex;
-            justify-content: center; /* Center the button within its 50% section */
+            justify-content: center; 
+           gap: 20px; /* Center the button within its 50% section */
         }
 
         button {
