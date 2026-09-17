@@ -16,6 +16,9 @@ app.get('/joke', async (req, res) => {
     res.render("Joke.ejs", { setup: jokeResponse.data.setup, delivery: jokeResponse.data.delivery });
 })
 app.get('/jokear', async (req, res) => {
+  try{
+
+  
 const jokeResponse = await axios.get('https://v2.jokeapi.dev/joke/Any');
     const data = jokeResponse.data;
 
@@ -54,7 +57,14 @@ Delivery: ${originalDelivery}`,
       setup: translatedJoke.setup,
       delivery: translatedJoke.delivery,
     });
-
+  } catch (error) {
+    console.error('Gemini error, serving raw joke as fallback:', error.message);
+    // Fallback: Show the English joke with a short notice rather than a 500 crash
+    res.render('Joke.ejs', {
+      setup: originalSetup || 'تعذر تحميل النكتة حالياً بسبب ضغط السيرفر، يرجى المحاولة لاحقاً.',
+      delivery: originalDelivery || '',
+    });
+  }
 
 
 })
